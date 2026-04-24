@@ -1,0 +1,206 @@
+@import '../styles/theme.css';
+
+/* ==================== Header Controls Container ==================== */
+.header-controls {
+    margin-left: auto;
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    min-width: 40px;
+}
+
+.cart-button:hover {
+    background-color: transparent !important;
+}
+
+.cart-icon-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+}
+
+/* ==================== TextField (Search Field) Styles ==================== */
+
+.search-field .MuiOutlinedInput-root {
+    color: var(--color-primary);
+    transition: var(--transition-default);
+}
+
+.search-field .MuiOutlinedInput-root fieldset {
+    border-color: var(--color-primary);
+    transition: var(--transition-default);
+}
+
+.search-field .MuiOutlinedInput-root:hover fieldset {
+    border-color: var(--color-primary);
+}
+
+.search-field .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: var(--color-primary);
+}
+
+.search-field .MuiInputBase-input {
+    color: var(--color-primary);
+}
+
+.search-field .MuiInputBase-input::placeholder {
+    color: var(--color-primary-light);
+    opacity: 1;
+}
+
+.search-field .MuiFormLabel-root {
+    color: var(--color-primary-light);
+}
+
+.search-field .MuiFormLabel-root.Mui-focused {
+    color: var(--color-primary);
+}
+
+/* ==================== Select (Dropdown) Styles ==================== */
+
+.category-select .MuiOutlinedInput-root,
+.sort-select .MuiOutlinedInput-root {
+    color: white !important;
+    transition: var(--transition-default);
+    background-color: transparent !important;
+}
+
+.category-select .MuiSelect-select,
+.sort-select .MuiSelect-select {
+    color: white !important;
+}
+
+/* Fix hover background being black */
+.category-select .MuiOutlinedInput-root:hover,
+.sort-select .MuiOutlinedInput-root:hover {
+    background-color: transparent !important;
+}
+
+/* Fix focus background being black */
+.category-select .MuiOutlinedInput-root.Mui-focused,
+.sort-select .MuiOutlinedInput-root.Mui-focused {
+    background-color: transparent !important;
+}
+
+/* Border styles */
+.category-select .MuiOutlinedInput-notchedOutline,
+.sort-select .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-primary) !important;
+    transition: var(--transition-default);
+}
+
+/* Keep border visible on hover */
+.category-select .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.sort-select .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-primary) !important;
+}
+
+/* Keep border visible on focus */
+.category-select .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.sort-select .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-primary) !important;
+    border-width: 2px;
+}
+
+/* Dropdown Icon (Arrow) Styles */
+.category-select .MuiSvgIcon-root,
+.sort-select .MuiSvgIcon-root {
+    color: var(--color-primary) !important;
+}
+
+.category-control,
+.sort-control {
+    min-width: 120px;
+    width: 120px;
+    max-width: 150px;
+}
+
+.category-control .MuiInputLabel-root,
+.sort-control .MuiInputLabel-root {
+    color: white !important;
+}
+
+/* Center the default label/placeholder inside the select field when not shrunk */
+.category-control .MuiInputLabel-root:not(.MuiInputLabel-shrink),
+.sort-control .MuiInputLabel-root:not(.MuiInputLabel-shrink) {
+    left: 0 !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+/* ==================== MenuItem (Dropdown Items) Styles ==================== */
+
+/* Style the menu paper background */
+.MuiPopover-root .MuiPaper-root,
+.MuiMenu-paper {
+    background-color: #333 !important;
+}
+
+/* Style menu items */
+.MuiMenu-paper .MuiMenuItem-root {
+    color: var(--color-primary) !important;
+    transition: var(--transition-default);
+    font-weight: 500;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root:hover {
+    background-color: var(--color-hover) !important;
+}
+
+/* Default selected item visibility */
+.MuiMenu-paper .MuiMenuItem-root[data-value=""] {
+    color: var(--color-primary) !important;
+}
+
+/* Selected menu item color */
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected,
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected:hover {
+    color: white !important;
+}
+
+/* Center text in the select input field (selected value) */
+.category-select .MuiSelect-select,
+.sort-select .MuiSelect-select {
+  text-align: center !important;
+}
+
+/* Center text in the dropdown menu items */
+.MuiMenu-paper .MuiMenuItem-root {
+  text-align: center !important;
+}

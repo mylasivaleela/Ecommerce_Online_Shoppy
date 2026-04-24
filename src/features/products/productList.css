@@ -1,0 +1,11 @@
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.pagination-container .MuiPaginationItem-root {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+}
