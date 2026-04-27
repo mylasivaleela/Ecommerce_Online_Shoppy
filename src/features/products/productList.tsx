@@ -26,7 +26,7 @@ const ProductList = () => {
 
     useEffect(() => {
         dispatch(setPage(1));
-    }, [search, category, sort]);
+    }, [dispatch, search, category, sort]);
 
     const filteredProducts = useMemo(() => {
         let products = [...data];
