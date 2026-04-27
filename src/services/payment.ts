@@ -5,7 +5,7 @@ export const openRazorpay = (order: any, onSuccess: () => void) => {
         currency: order.currency,
         order_id: order.id,
         handler: async function (response: any) {
-            const res = await fetch("http://localhost:3001/api/verify-payment", {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/api/verify-payment`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

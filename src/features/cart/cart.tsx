@@ -14,7 +14,7 @@ const Cart = () => {
     const roundedTotal = Math.round(total);
 
     const handleCheckout = async() => {
-        const res = await fetch("http://localhost:3001/api/create-order", {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/create-order`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
