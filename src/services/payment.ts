@@ -1,6 +1,6 @@
 export const openRazorpay = (order: any, onSuccess: () => void) => {
     const options = {
-        key: 'rzp_test_SgXQUesiaXyA4r',
+        key: 'rzp_test_SqrOoTN7tccE7e',
         amount: order.amount,
         currency: order.currency,
         order_id: order.id,
@@ -19,7 +19,7 @@ export const openRazorpay = (order: any, onSuccess: () => void) => {
                 onSuccess();
             } else {
                 // Handle failed payment
-                alert("Payment failed ❌");
+              console.error("Payment verification failed", data);
             }
         }
     };

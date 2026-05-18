@@ -38,7 +38,7 @@ const ProductList = () => {
         }
 
         if(category) {
-            products = products.filter(product => product.category ===category)
+            products = products.filter(product => product.category === category)
         }
 
         if(sort === "low") {
@@ -51,7 +51,7 @@ const ProductList = () => {
     }, [data, search, category, sort]);
 
     const paginatedProducts = useMemo(() => {
-        const start = (page -1) * limit;
+        const start = (page - 1) * limit;
         const end = start + limit;
         return filteredProducts.slice(start, end);
     },[filteredProducts,page, limit]);
