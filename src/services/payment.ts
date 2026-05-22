@@ -19,7 +19,7 @@ export const openRazorpay = (order: any, onSuccess: () => void) => {
                 onSuccess();
             } else {
                 // Handle failed payment
-                alert("Payment failed ❌");
+              console.error("Payment verification failed", data);
             }
         }
     };

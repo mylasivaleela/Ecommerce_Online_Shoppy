@@ -38,7 +38,7 @@ const ProductList = () => {
             );
         }
 
-        if (category) {
+        if(category) {
             products = products.filter(product => product.category === category)
         }
 
