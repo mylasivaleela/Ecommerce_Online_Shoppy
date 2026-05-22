@@ -1,6 +1,6 @@
 export const openRazorpay = (order: any, onSuccess: () => void) => {
     const options = {
-        key: 'rzp_test_SgXQUesiaXyA4r',
+        key: 'rzp_test_SqrOoTN7tccE7e',
         amount: order.amount,
         currency: order.currency,
         order_id: order.id,
